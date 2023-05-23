@@ -62,7 +62,9 @@ Partial Class CetakLaporanPembelian
         Me.Controls.Add(Me.CrystalReportViewer2)
         Me.Controls.Add(Me.CrystalReportViewer1)
         Me.Name = "CetakLaporanPembelian"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CetakLaporanPembelian"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
 
     End Sub

@@ -47,7 +47,9 @@ Partial Class CetakLaporanPenjualan
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.CrystalReportViewer1)
         Me.Name = "CetakLaporanPenjualan"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CetakLaporanPenjualan"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
 
     End Sub

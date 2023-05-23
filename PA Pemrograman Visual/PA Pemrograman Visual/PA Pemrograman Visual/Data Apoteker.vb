@@ -48,7 +48,6 @@ Public Class Data_Apoteker
             .Columns(5).Width = 300
         End With
     End Sub
-
     Private Sub btnSimpan_Click(sender As Object, e As EventArgs) Handles btnSimpan.Click
         If tbKodeApoteker.Text = "" Then
             MessageBox.Show("Data Belum Lengkap !!!", "GAGAL", MessageBoxButtons.OK, MessageBoxIcon.Error)

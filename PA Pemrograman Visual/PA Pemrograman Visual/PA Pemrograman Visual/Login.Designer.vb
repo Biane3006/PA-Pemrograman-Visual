@@ -25,10 +25,10 @@ Partial Class Login
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.cbShowPassword = New System.Windows.Forms.CheckBox()
         Me.labelLogin = New System.Windows.Forms.Label()
         Me.tbIdAkun = New System.Windows.Forms.TextBox()
         Me.btnLogin = New MetroFramework.Controls.MetroButton()
-        Me.cbShowPassword = New MetroFramework.Controls.MetroCheckBox()
         Me.tbPassword = New MetroFramework.Controls.MetroTextBox()
         Me.tbUsername = New MetroFramework.Controls.MetroTextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -36,6 +36,7 @@ Partial Class Login
         Me.labelTeksBerjalan = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btnClose = New MetroFramework.Controls.MetroButton()
         Me.labelSiapMelayaniAnda = New System.Windows.Forms.Label()
         Me.labelApotekSamarinda = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
@@ -48,17 +49,28 @@ Partial Class Login
         '
         Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(106, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.cbShowPassword)
         Me.Panel1.Controls.Add(Me.labelLogin)
         Me.Panel1.Controls.Add(Me.tbIdAkun)
         Me.Panel1.Controls.Add(Me.btnLogin)
-        Me.Panel1.Controls.Add(Me.cbShowPassword)
         Me.Panel1.Controls.Add(Me.tbPassword)
         Me.Panel1.Controls.Add(Me.tbUsername)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Location = New System.Drawing.Point(-1, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(442, 486)
+        Me.Panel1.Size = New System.Drawing.Size(589, 598)
         Me.Panel1.TabIndex = 7
+        '
+        'cbShowPassword
+        '
+        Me.cbShowPassword.AutoSize = True
+        Me.cbShowPassword.Location = New System.Drawing.Point(128, 388)
+        Me.cbShowPassword.Name = "cbShowPassword"
+        Me.cbShowPassword.Size = New System.Drawing.Size(125, 20)
+        Me.cbShowPassword.TabIndex = 9
+        Me.cbShowPassword.Text = "Show Password"
+        Me.cbShowPassword.UseVisualStyleBackColor = True
         '
         'labelLogin
         '
@@ -67,9 +79,10 @@ Partial Class Login
         Me.labelLogin.BackColor = System.Drawing.Color.Transparent
         Me.labelLogin.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.labelLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.labelLogin.Location = New System.Drawing.Point(90, 3)
+        Me.labelLogin.Location = New System.Drawing.Point(120, 4)
+        Me.labelLogin.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.labelLogin.Name = "labelLogin"
-        Me.labelLogin.Size = New System.Drawing.Size(240, 37)
+        Me.labelLogin.Size = New System.Drawing.Size(305, 46)
         Me.labelLogin.TabIndex = 14
         Me.labelLogin.Text = "L     O     G     I     N"
         Me.labelLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -77,10 +90,11 @@ Partial Class Login
         'tbIdAkun
         '
         Me.tbIdAkun.Enabled = False
-        Me.tbIdAkun.Location = New System.Drawing.Point(97, 337)
+        Me.tbIdAkun.Location = New System.Drawing.Point(129, 415)
+        Me.tbIdAkun.Margin = New System.Windows.Forms.Padding(4)
         Me.tbIdAkun.Name = "tbIdAkun"
         Me.tbIdAkun.ReadOnly = True
-        Me.tbIdAkun.Size = New System.Drawing.Size(44, 20)
+        Me.tbIdAkun.Size = New System.Drawing.Size(57, 22)
         Me.tbIdAkun.TabIndex = 12
         Me.tbIdAkun.Visible = False
         '
@@ -88,26 +102,14 @@ Partial Class Login
         '
         Me.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnLogin.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(36, Byte), Integer))
-        Me.btnLogin.Location = New System.Drawing.Point(97, 392)
+        Me.btnLogin.Location = New System.Drawing.Point(129, 482)
+        Me.btnLogin.Margin = New System.Windows.Forms.Padding(4)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(233, 37)
+        Me.btnLogin.Size = New System.Drawing.Size(311, 46)
         Me.btnLogin.TabIndex = 11
         Me.btnLogin.Text = "SUBMIT"
         Me.btnLogin.UseCustomBackColor = True
         Me.btnLogin.UseSelectable = True
-        '
-        'cbShowPassword
-        '
-        Me.cbShowPassword.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.cbShowPassword.AutoSize = True
-        Me.cbShowPassword.BackColor = System.Drawing.Color.Transparent
-        Me.cbShowPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.cbShowPassword.Location = New System.Drawing.Point(97, 316)
-        Me.cbShowPassword.Name = "cbShowPassword"
-        Me.cbShowPassword.Size = New System.Drawing.Size(105, 15)
-        Me.cbShowPassword.TabIndex = 10
-        Me.cbShowPassword.Text = "Show Password"
-        Me.cbShowPassword.UseSelectable = True
         '
         'tbPassword
         '
@@ -115,14 +117,15 @@ Partial Class Login
         Me.tbPassword.FontSize = MetroFramework.MetroTextBoxSize.Tall
         Me.tbPassword.Icon = CType(resources.GetObject("tbPassword.Icon"), System.Drawing.Image)
         Me.tbPassword.Lines = New String(-1) {}
-        Me.tbPassword.Location = New System.Drawing.Point(97, 263)
+        Me.tbPassword.Location = New System.Drawing.Point(129, 324)
+        Me.tbPassword.Margin = New System.Windows.Forms.Padding(4)
         Me.tbPassword.MaxLength = 32767
         Me.tbPassword.Name = "tbPassword"
         Me.tbPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbPassword.PromptText = "Password"
         Me.tbPassword.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.tbPassword.SelectedText = ""
-        Me.tbPassword.Size = New System.Drawing.Size(233, 35)
+        Me.tbPassword.Size = New System.Drawing.Size(311, 43)
         Me.tbPassword.TabIndex = 9
         Me.tbPassword.UseSelectable = True
         '
@@ -132,14 +135,15 @@ Partial Class Login
         Me.tbUsername.FontSize = MetroFramework.MetroTextBoxSize.Tall
         Me.tbUsername.Icon = CType(resources.GetObject("tbUsername.Icon"), System.Drawing.Image)
         Me.tbUsername.Lines = New String(-1) {}
-        Me.tbUsername.Location = New System.Drawing.Point(97, 222)
+        Me.tbUsername.Location = New System.Drawing.Point(129, 273)
+        Me.tbUsername.Margin = New System.Windows.Forms.Padding(4)
         Me.tbUsername.MaxLength = 32767
         Me.tbUsername.Name = "tbUsername"
         Me.tbUsername.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbUsername.PromptText = "Username"
         Me.tbUsername.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.tbUsername.SelectedText = ""
-        Me.tbUsername.Size = New System.Drawing.Size(233, 35)
+        Me.tbUsername.Size = New System.Drawing.Size(311, 43)
         Me.tbUsername.TabIndex = 8
         Me.tbUsername.UseSelectable = True
         '
@@ -149,9 +153,10 @@ Partial Class Login
         Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(106, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(134, 43)
+        Me.PictureBox1.Location = New System.Drawing.Point(179, 53)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(147, 147)
+        Me.PictureBox1.Size = New System.Drawing.Size(196, 181)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 4
         Me.PictureBox1.TabStop = False
@@ -167,9 +172,10 @@ Partial Class Login
         Me.labelTeksBerjalan.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.labelTeksBerjalan.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.labelTeksBerjalan.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.labelTeksBerjalan.Location = New System.Drawing.Point(447, 9)
+        Me.labelTeksBerjalan.Location = New System.Drawing.Point(596, 11)
+        Me.labelTeksBerjalan.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.labelTeksBerjalan.Name = "labelTeksBerjalan"
-        Me.labelTeksBerjalan.Size = New System.Drawing.Size(1758, 37)
+        Me.labelTeksBerjalan.Size = New System.Drawing.Size(2235, 46)
         Me.labelTeksBerjalan.TabIndex = 13
         Me.labelTeksBerjalan.Text = "S  E  L  A  M  A  T     D  A  T  A  N  G     D  I     A  P  L  I  K  A  S  I     " &
     "P  E  N  D  A  T  A  A  N     O  B  A  T     A  P  O  T  E  K     S  A  M  A  R " &
@@ -179,9 +185,10 @@ Partial Class Login
         'PictureBox2
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(71, 86)
+        Me.PictureBox2.Location = New System.Drawing.Point(95, 106)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(300, 300)
+        Me.PictureBox2.Size = New System.Drawing.Size(400, 369)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 14
         Me.PictureBox2.TabStop = False
@@ -189,13 +196,30 @@ Partial Class Login
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(36, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.btnClose)
         Me.Panel2.Controls.Add(Me.labelSiapMelayaniAnda)
         Me.Panel2.Controls.Add(Me.labelApotekSamarinda)
         Me.Panel2.Controls.Add(Me.PictureBox2)
-        Me.Panel2.Location = New System.Drawing.Point(447, 3)
+        Me.Panel2.Location = New System.Drawing.Point(596, 4)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(445, 483)
+        Me.Panel2.Size = New System.Drawing.Size(593, 594)
         Me.Panel2.TabIndex = 15
+        '
+        'btnClose
+        '
+        Me.btnClose.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnClose.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(36, Byte), Integer))
+        Me.btnClose.BackgroundImage = CType(resources.GetObject("btnClose.BackgroundImage"), System.Drawing.Image)
+        Me.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnClose.FontSize = MetroFramework.MetroButtonSize.Tall
+        Me.btnClose.Location = New System.Drawing.Point(29, 106)
+        Me.btnClose.Margin = New System.Windows.Forms.Padding(0)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(60, 60)
+        Me.btnClose.TabIndex = 15
+        Me.btnClose.UseCustomBackColor = True
+        Me.btnClose.UseSelectable = True
         '
         'labelSiapMelayaniAnda
         '
@@ -204,9 +228,10 @@ Partial Class Login
         Me.labelSiapMelayaniAnda.BackColor = System.Drawing.Color.Transparent
         Me.labelSiapMelayaniAnda.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.labelSiapMelayaniAnda.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.labelSiapMelayaniAnda.Location = New System.Drawing.Point(53, 444)
+        Me.labelSiapMelayaniAnda.Location = New System.Drawing.Point(71, 546)
+        Me.labelSiapMelayaniAnda.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.labelSiapMelayaniAnda.Name = "labelSiapMelayaniAnda"
-        Me.labelSiapMelayaniAnda.Size = New System.Drawing.Size(369, 37)
+        Me.labelSiapMelayaniAnda.Size = New System.Drawing.Size(458, 46)
         Me.labelSiapMelayaniAnda.TabIndex = 16
         Me.labelSiapMelayaniAnda.Text = "Siap Melayani Anda 24 Jam"
         Me.labelSiapMelayaniAnda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -218,24 +243,26 @@ Partial Class Login
         Me.labelApotekSamarinda.BackColor = System.Drawing.Color.Transparent
         Me.labelApotekSamarinda.Font = New System.Drawing.Font("Segoe UI", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.labelApotekSamarinda.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.labelApotekSamarinda.Location = New System.Drawing.Point(13, 395)
+        Me.labelApotekSamarinda.Location = New System.Drawing.Point(17, 486)
+        Me.labelApotekSamarinda.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.labelApotekSamarinda.Name = "labelApotekSamarinda"
-        Me.labelApotekSamarinda.Size = New System.Drawing.Size(432, 54)
+        Me.labelApotekSamarinda.Size = New System.Drawing.Size(539, 67)
         Me.labelApotekSamarinda.TabIndex = 15
         Me.labelApotekSamarinda.Text = "APOTEK SAMARINDA"
         Me.labelApotekSamarinda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Login
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(36, Byte), Integer))
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(892, 486)
+        Me.ClientSize = New System.Drawing.Size(1189, 598)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.labelTeksBerjalan)
         Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
@@ -252,7 +279,6 @@ Partial Class Login
     End Sub
     Friend WithEvents Panel1 As Panel
     Friend WithEvents btnLogin As MetroFramework.Controls.MetroButton
-    Friend WithEvents cbShowPassword As MetroFramework.Controls.MetroCheckBox
     Friend WithEvents tbPassword As MetroFramework.Controls.MetroTextBox
     Friend WithEvents tbUsername As MetroFramework.Controls.MetroTextBox
     Friend WithEvents PictureBox1 As PictureBox
@@ -264,4 +290,6 @@ Partial Class Login
     Friend WithEvents Panel2 As Panel
     Friend WithEvents labelSiapMelayaniAnda As Label
     Friend WithEvents labelApotekSamarinda As Label
+    Friend WithEvents cbShowPassword As CheckBox
+    Friend WithEvents btnClose As MetroFramework.Controls.MetroButton
 End Class

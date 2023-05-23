@@ -11,7 +11,7 @@
     <AssemblyName>Projek Akhir Visual</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
@@ -117,6 +117,12 @@
       <DependentUpon>LaporanPenjualan.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Loading.Designer.vb">
+      <DependentUpon>Loading.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Loading.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Pengaturan Akun.Designer.vb">
       <DependentUpon>Pengaturan Akun.vb</DependentUpon>
     </Compile>
@@ -216,6 +222,9 @@
     <EmbeddedResource Include="LaporanPenjualan.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>LaporanPenjualan.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loading.resx">
+      <DependentUpon>Loading.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pengaturan Akun.resx">
       <DependentUpon>Pengaturan Akun.vb</DependentUpon>

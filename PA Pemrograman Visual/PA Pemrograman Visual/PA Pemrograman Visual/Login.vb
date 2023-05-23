@@ -20,7 +20,7 @@ Public Class Login
         'Menyalakan Password Char
         tbPassword.UseSystemPasswordChar = True
         'Set lokasi Label1(Teks Berjalan)
-        labelTeksBerjalan.Location = New Point(Panel1.Width - labelTeksBerjalan.Width, Me.Height / 10)
+        labelTeksBerjalan.Location = New Point(Me.Width, Me.Height / 10)
         labelLogin.BackColor = Color.Transparent
         'set lokasi Label2 agar berada di tengah
         labelLogin.Location = New Point(Panel1.Width / 2 - (labelLogin.Width / 2), Me.Height / 10)
@@ -28,10 +28,13 @@ Public Class Login
         PictureBox1.Location = New Point((Panel1.Width / 2) - (PictureBox1.Width / 2), Me.Height / 5)
         'set lokasi PictureBox2 agar berada ditengah
         PictureBox2.Location = New Point((Panel2.Width / 2) - (PictureBox2.Width / 2), Me.Height / 5)
-
+        cbShowPassword.Location = New Point(tbPassword.Location.X, tbPassword.Location.Y + tbPassword.Height + 20)
         'set lokasi label "Apotek Samarinda" dan label "Siap Melayani Anda 24 Jam"
         labelApotekSamarinda.Location = New Point((Panel2.Width / 2) - (labelApotekSamarinda.Width / 2), (Me.Height / 2) + 200)
         labelSiapMelayaniAnda.Location = New Point((Panel2.Width / 2) - (labelSiapMelayaniAnda.Width / 2), labelApotekSamarinda.Location.Y + labelApotekSamarinda.Height)
+        'Mengatur Posisi Button Close (X)
+        btnClose.Size = New Size(60, 60)
+        btnClose.Location = New Point(Panel2.Width - btnClose.Width, 0)
     End Sub
 
     'Event ketika Checkbox ShowPassword di aktifkan
@@ -46,11 +49,11 @@ Public Class Login
 
     'Event untuk membuat animasi Tulisan Berjalan
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        If labelTeksBerjalan.Left >= Me.Width Then
+        If labelTeksBerjalan.Right <= Panel1.Width Then
             'Posisi awal saat label sudah melebihi lebar Form, sehingga akan mengulang ke awal
-            labelTeksBerjalan.Left = -labelTeksBerjalan.Left + (Me.Width / 2.3) + (-400)
+            labelTeksBerjalan.Left = Me.Width
         Else
-            labelTeksBerjalan.Left = labelTeksBerjalan.Left + 5
+            labelTeksBerjalan.Left = labelTeksBerjalan.Left - 10
         End If
     End Sub
 
@@ -71,5 +74,10 @@ Public Class Login
         End If
         tbUsername.Focus()
         Koneksi.Close()
+    End Sub
+
+    'event close
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        Application.Exit()
     End Sub
 End Class
